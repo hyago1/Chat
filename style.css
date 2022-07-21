@@ -1,0 +1,13 @@
+body{
+    background-color: brown;
+    height: 100vh;
+    padding: 0px;
+}
+form{
+    
+    position: fixed;
+    bottom: 0px;
+}
+input{
+    width: 100%;
+}
