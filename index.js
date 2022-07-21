@@ -40,6 +40,10 @@ io.on('connection', (socket, res) => {
        
         io.to(roomName).emit('addMessage', msg, userChat)
     })
+    socket.on('disconnect', (msg) => {
+        console.log('desconectado');
+        io.socketsLeave(roomName)
+    })
 
 
 
@@ -47,6 +51,6 @@ io.on('connection', (socket, res) => {
 
 
 
-server.listen(3000, () => {
+server.listen(process.env.PORT || 3000, () => {
     console.log('listening on *:3000');
 });
